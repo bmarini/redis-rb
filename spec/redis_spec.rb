@@ -640,6 +640,8 @@ describe "redis" do
     100.times do |idx|
       @r[idx].should == "foo#{idx}"
     end
+
+    @r.type('1').should == "string"
   end
 
   it "should be able to pipeline writes" do

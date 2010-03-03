@@ -78,6 +78,10 @@ class DistRedis
     end
   end
 
+  def type(key)
+    method_missing(:type, key)
+  end
+
   def mset()
 
   end
